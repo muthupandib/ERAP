@@ -1,8 +1,7 @@
-/* eslint-disable import/no-extraneous-dependencies */
-import Cookies from 'js-cookie'
 import {useContext} from 'react'
 import {Link, withRouter} from 'react-router-dom'
 import {AiOutlineShoppingCart} from 'react-icons/ai'
+import Cookies from 'js-cookie'
 
 import CartContext from '../../context/CartContext'
 
@@ -20,7 +19,7 @@ const Header = props => {
   const renderCartIcon = () => (
     <div className='cart-icon-link'>
       <Link to='/cart'>
-        <button type='button' className='cart-icon-button' data-testid='cart'>
+        <button type='button' className='cart-icon-button'>
           <AiOutlineShoppingCart className='cart-icon' />
         </button>
       </Link>

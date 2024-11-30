@@ -34,7 +34,8 @@ const Home = () => {
     }))
 
   const fetchRestaurantApi = async () => {
-    const api = 'https://run.mocky.io/v3/a67edc87-49c7-4822-9cb4-e2ef94cb3099'
+    const api =
+      'https://apis2.ccbp.in/restaurant-app/restaurant-menu-list-details'
     const apiResponse = await fetch(api)
     const data = await apiResponse.json()
     const updatedData = getUpdatedData(data[0].table_menu_list)

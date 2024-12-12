@@ -1,14 +1,12 @@
-/* eslint-disable import/no-extraneous-dependencies */
-import Cookies from 'js-cookie'
 import {Redirect, Route} from 'react-router-dom'
+import Cookie from 'js-cookie'
 
 const ProtectedRoute = props => {
-  const jwtToken = Cookies.get('jwt_token')
+  const token = Cookie.get('jwt_token')
 
-  if (!jwtToken) {
+  if (token === undefined) {
     return <Redirect to='/login' />
   }
-
   return <Route {...props} />
 }
 
